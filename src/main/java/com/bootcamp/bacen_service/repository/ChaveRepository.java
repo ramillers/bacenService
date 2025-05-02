@@ -9,4 +9,5 @@ import java.util.UUID;
 public interface ChaveRepository extends JpaRepository<Chave, UUID> {
     boolean existsByChave(final String chave);
     Optional<Chave> findByChave(final String chavePesquisada);
+    void deleteById(UUID id);
 }

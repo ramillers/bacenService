@@ -13,8 +13,10 @@ public class Chave {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @Column
+
+    @Column(unique = true)
     private String chave;
+
     @Column
     private Boolean ativa;
 }
